@@ -1,0 +1,128 @@
+/*Header Section of the site*/
+.site-header {
+  @include tablet {
+    display: flex;
+    justify-content: space-around;
+    height: 6rem;
+    padding-left: 0;
+  }
+  @include desktop {
+    height: 5rem;
+  }
+  &__logo {
+    margin-top: $large;
+    margin-bottom: $large;
+    height: $large;
+    @include tablet {
+      background-repeat: no-repeat;
+      height: $large;
+      margin-top: auto;
+      margin-bottom: auto;
+    }
+    @include desktop {
+      height: $medium;
+    }
+  }
+
+  &__input {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    @include tablet {
+      display: flex;
+      flex-direction: row;
+      margin-top: auto;
+      margin-bottom: auto;
+    }
+    &--button {
+      height: $vlarge;
+      background-color: $secondary-blue;
+      color: $primary-white;
+      font-size: $small;
+      font-weight: 600;
+      line-height: $medium;
+      padding: 0 $vlarge;
+      border-radius: 5px;
+      text-align: center;
+      border: 1px solid $primary-blue;
+      font-family: "AvenirNext LT Pro";
+      background-image: url("../../src/assets/icons/upload.svg");
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: left center;
+      background-size: 25px 25px;
+      width: 100%;
+      margin-top: $large;
+      margin-left: $vlarge;
+      margin-right: $vlarge;
+
+      @include tablet {
+        margin: auto;
+        height: $vlarge;
+        width: 10rem;
+      }
+      @include desktop {
+        height: 2.5rem;
+        width: 9rem;
+        font-size: $vsmall;
+        font-weight: 600;
+      }
+    }
+    &--search {
+      border: 1px solid $primary-silver;
+      background-color: $secondary-alabaster;
+      border-radius: 5px;
+      overflow: hidden;
+      width: 100%;
+      height: $vlarge;
+      margin-right: $small;
+      background-image: url("../../src/assets/icons/search.svg"); /* Replace 'path/to/search-icon.png' with the path to your search icon */
+      background-size: $medium; /* Adjust the size of the search icon */
+      background-repeat: no-repeat; /* Ensure the search icon is not repeated */
+      background-position: 5% center;
+      padding-left: $vlarge;
+      font-family: "AvenirNext LT Pro";
+      font-size: $small;
+      font-weight: 600;
+      padding-top: 0;
+      padding-bottom: 0;
+      @include tablet {
+        height: $vlarge;
+        width: 22rem;
+      }
+      @include desktop {
+        height: 2.5rem;
+        width: 20rem;
+      }
+    }
+  }
+  &__avatar {
+    margin-top: auto;
+    margin-bottom: auto;
+    width: $vlarge;
+    height: $vlarge;
+    overflow: hidden;
+    border-radius: 50%;
+    @include desktop {
+      width: $large;
+      height: $large;
+    }
+    &--img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+}
+.hidden {
+  display: block;
+  @include tablet {
+    display: none;
+  }
+}
+.hidden1 {
+  display: none;
+  @include tablet {
+    display: block;
+  }
+}

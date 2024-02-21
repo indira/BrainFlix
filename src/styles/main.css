@@ -1,0 +1,219 @@
+@import "normalize.css";
+/*Colors Variables*/
+/*mixins variables*/
+/*Fonts*/
+/*Fonts used in the site*/
+@font-face {
+  font-family: "AvenirNext LT Pro";
+  src: url("../../src/assets/fonts/AvenirNextLTPro-Demi.woff") format("woff2"), url("../../src/assets/fonts/AvenirNextLTPro-Demi.woff") format("woff");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "AvenirNext LT Pro";
+  src: url("../../src/assets/fonts/AvenirNextLTPro-Bold.woff2") format("woff2"), url("../../src/assets/fonts/AvenirNextLTPro-Bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "AvenirNext LT Pro";
+  src: url("../../src/assets/fonts/AvenirNextLTPro-Regular.woff2") format("woff2"), url("../../src/assets/fonts/AvenirNextLTPro-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+/* media query for mobile */
+/* media query for desktops */
+/* universal-reset */
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  font-family: "AvenirNext LT Pro", sans-serif;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+}
+
+/*Overall Section wrapper*/
+.wrapper {
+  overflow: hidden;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+@media (min-width: 767px) {
+  .wrapper {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+@media (min-width: 1280px) {
+  .wrapper {
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+}
+
+/*Header Section of the site*/
+@media (min-width: 767px) {
+  .site-header {
+    display: flex;
+    justify-content: space-around;
+    height: 6rem;
+    padding-left: 0;
+  }
+}
+@media (min-width: 1280px) {
+  .site-header {
+    height: 5rem;
+  }
+}
+.site-header__logo {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  height: 2rem;
+}
+@media (min-width: 767px) {
+  .site-header__logo {
+    background-repeat: no-repeat;
+    height: 2rem;
+    margin-top: auto;
+    margin-bottom: auto;
+  }
+}
+@media (min-width: 1280px) {
+  .site-header__logo {
+    height: 1.5rem;
+  }
+}
+.site-header__input {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+@media (min-width: 767px) {
+  .site-header__input {
+    display: flex;
+    flex-direction: row;
+    margin-top: auto;
+    margin-bottom: auto;
+  }
+}
+.site-header__input--button {
+  height: 3rem;
+  background-color: #0065ad;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.5rem;
+  padding: 0 3rem;
+  border-radius: 5px;
+  text-align: center;
+  border: 1px solid #0095ff;
+  font-family: "AvenirNext LT Pro";
+  background-image: url("../../src/assets/icons/upload.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: left center;
+  background-size: 25px 25px;
+  width: 100%;
+  margin-top: 2rem;
+  margin-left: 3rem;
+  margin-right: 3rem;
+}
+@media (min-width: 767px) {
+  .site-header__input--button {
+    margin: auto;
+    height: 3rem;
+    width: 10rem;
+  }
+}
+@media (min-width: 1280px) {
+  .site-header__input--button {
+    height: 2.5rem;
+    width: 9rem;
+    font-size: 0.8rem;
+    font-weight: 600;
+  }
+}
+.site-header__input--search {
+  border: 1px solid #afafaf;
+  background-color: #fafafa;
+  border-radius: 5px;
+  overflow: hidden;
+  width: 100%;
+  height: 3rem;
+  margin-right: 1rem;
+  background-image: url("../../src/assets/icons/search.svg"); /* Replace 'path/to/search-icon.png' with the path to your search icon */
+  background-size: 1.5rem; /* Adjust the size of the search icon */
+  background-repeat: no-repeat; /* Ensure the search icon is not repeated */
+  background-position: 5% center;
+  padding-left: 3rem;
+  font-family: "AvenirNext LT Pro";
+  font-size: 1rem;
+  font-weight: 600;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+@media (min-width: 767px) {
+  .site-header__input--search {
+    height: 3rem;
+    width: 22rem;
+  }
+}
+@media (min-width: 1280px) {
+  .site-header__input--search {
+    height: 2.5rem;
+    width: 20rem;
+  }
+}
+.site-header__avatar {
+  margin-top: auto;
+  margin-bottom: auto;
+  width: 3rem;
+  height: 3rem;
+  overflow: hidden;
+  border-radius: 50%;
+}
+@media (min-width: 1280px) {
+  .site-header__avatar {
+    width: 2rem;
+    height: 2rem;
+  }
+}
+.site-header__avatar--img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.hidden {
+  display: block;
+}
+@media (min-width: 767px) {
+  .hidden {
+    display: none;
+  }
+}
+
+.hidden1 {
+  display: none;
+}
+@media (min-width: 767px) {
+  .hidden1 {
+    display: block;
+  }
+}/*# sourceMappingURL=main.css.map */
