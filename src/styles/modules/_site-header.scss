@@ -15,7 +15,6 @@
     height: $large;
     @include tablet {
       background-repeat: no-repeat;
-      height: $large;
       margin-top: auto;
       margin-bottom: auto;
     }
@@ -26,13 +25,15 @@
 
   &__input {
     display: flex;
-    flex-direction: column;
     align-items: center;
+    margin-bottom: -$medium;
     @include tablet {
-      display: flex;
       flex-direction: row;
       margin-top: auto;
       margin-bottom: auto;
+    }
+    @include desktop {
+      padding-left: 18rem;
     }
     &--button {
       height: $vlarge;
@@ -50,11 +51,8 @@
       background-size: contain;
       background-repeat: no-repeat;
       background-position: left center;
-      background-size: 25px 25px;
+      background-size: $medium $medium;
       width: 100%;
-      margin-top: $large;
-      margin-left: $vlarge;
-      margin-right: $vlarge;
 
       @include tablet {
         margin: auto;
@@ -73,9 +71,9 @@
       background-color: $secondary-alabaster;
       border-radius: 5px;
       overflow: hidden;
-      width: 100%;
+      width: 90%;
       height: $vlarge;
-      margin-right: $small;
+      margin-right: $large;
       background-image: url("../../src/assets/icons/search.svg"); /* Replace 'path/to/search-icon.png' with the path to your search icon */
       background-size: $medium; /* Adjust the size of the search icon */
       background-repeat: no-repeat; /* Ensure the search icon is not repeated */
@@ -112,17 +110,5 @@
       height: 100%;
       object-fit: cover;
     }
-  }
-}
-.hidden {
-  display: block;
-  @include tablet {
-    display: none;
-  }
-}
-.hidden1 {
-  display: none;
-  @include tablet {
-    display: block;
   }
 }

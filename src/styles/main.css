@@ -45,6 +45,24 @@ img {
   height: 100%;
 }
 
+.hidden {
+  display: block;
+}
+@media (min-width: 767px) {
+  .hidden {
+    display: none;
+  }
+}
+
+.hidden1 {
+  display: none;
+}
+@media (min-width: 767px) {
+  .hidden1 {
+    display: block;
+  }
+}
+
 /*Overall Section wrapper*/
 .wrapper {
   overflow: hidden;
@@ -88,7 +106,6 @@ img {
 @media (min-width: 767px) {
   .site-header__logo {
     background-repeat: no-repeat;
-    height: 2rem;
     margin-top: auto;
     margin-bottom: auto;
   }
@@ -100,15 +117,19 @@ img {
 }
 .site-header__input {
   display: flex;
-  flex-direction: column;
   align-items: center;
+  margin-bottom: -1.5rem;
 }
 @media (min-width: 767px) {
   .site-header__input {
-    display: flex;
     flex-direction: row;
     margin-top: auto;
     margin-bottom: auto;
+  }
+}
+@media (min-width: 1280px) {
+  .site-header__input {
+    padding-left: 18rem;
   }
 }
 .site-header__input--button {
@@ -127,11 +148,8 @@ img {
   background-size: contain;
   background-repeat: no-repeat;
   background-position: left center;
-  background-size: 25px 25px;
+  background-size: 1.5rem 1.5rem;
   width: 100%;
-  margin-top: 2rem;
-  margin-left: 3rem;
-  margin-right: 3rem;
 }
 @media (min-width: 767px) {
   .site-header__input--button {
@@ -153,9 +171,9 @@ img {
   background-color: #fafafa;
   border-radius: 5px;
   overflow: hidden;
-  width: 100%;
+  width: 90%;
   height: 3rem;
-  margin-right: 1rem;
+  margin-right: 2rem;
   background-image: url("../../src/assets/icons/search.svg"); /* Replace 'path/to/search-icon.png' with the path to your search icon */
   background-size: 1.5rem; /* Adjust the size of the search icon */
   background-repeat: no-repeat; /* Ensure the search icon is not repeated */
@@ -198,22 +216,4 @@ img {
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
-}
-
-.hidden {
-  display: block;
-}
-@media (min-width: 767px) {
-  .hidden {
-    display: none;
-  }
-}
-
-.hidden1 {
-  display: none;
-}
-@media (min-width: 767px) {
-  .hidden1 {
-    display: block;
-  }
 }/*# sourceMappingURL=main.css.map */
