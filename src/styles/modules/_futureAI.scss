@@ -1,0 +1,81 @@
+.AI-Container {
+  display: flex;
+  flex-direction: column;
+  margin-top: $vlarge;
+  margin-bottom: $large;
+  @include tablet {
+    display: flex;
+    flex-direction: column;
+  }
+  @include desktop {
+    display: flex;
+  }
+
+  &__future {
+    border-top: 2px solid $primary-silver;
+    padding-top: $medium;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 2px solid $primary-silver;
+    @include tablet {
+      border-top: 0;
+    }
+    &--one {
+      display: flex;
+      flex-direction: column;
+      padding-bottom: 10px;
+      @include tablet {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+      }
+    }
+
+    &--two {
+      display: flex;
+      flex-direction: column;
+      padding-bottom: 10px;
+      @include tablet {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+      }
+    }
+
+    &-by {
+      padding-bottom: $medium;
+      margin-right: $vlarge;
+      text-align: center;
+      @include tablet {
+        padding-bottom: 0;
+      }
+    }
+
+    &--icon {
+      padding-right: 0.5rem;
+      width: 3rem;
+      height: 3rem;
+    }
+    &-view {
+      display: flex;
+      padding-bottom: $medium;
+      margin-right: $vlarge;
+      @include tablet {
+        padding-bottom: 0;
+      }
+    }
+
+    &-like {
+      display: flex;
+      margin-right: $vlarge;
+    }
+  }
+  &__description {
+    &--text {
+      margin-top: $large;
+      font-size: $medium;
+      font-family: "AvenirNext LT Pro";
+      margin-bottom: 0;
+    }
+  }
+}

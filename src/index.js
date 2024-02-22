@@ -1,13 +1,16 @@
 import React from "react"
 import ReactDOM from "react-dom/client"
 import Header from "./components/Header/Header"
-import Footer from "./components/Footer/Footer"
+import Hero from "./components/Hero/Hero"
+import FutureAI from "./components/FutureAI/FutureAI"
 //Calling the stylesheet
 import "../src/styles/main.css"
 function App() {
   return (
     <>
       <Header />
+      <Hero />
+      <FutureAI />
     </>
   )
 }

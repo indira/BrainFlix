@@ -1,0 +1,50 @@
+.headline {
+  &--silver {
+    color: $primary-silver;
+  }
+  &--margin-top {
+    margin-top: $vlarge;
+  }
+  &--margin-bottom {
+    margin-bottom: $large;
+  }
+
+  &--vlarge {
+    font-weight: 700;
+    font-size: $large;
+    font-family: "AvenirNext LT Pro";
+    @include tablet {
+      font-size: $vlarge;
+    }
+    @include desktop {
+      font-size: $large;
+    }
+  }
+  &--large {
+    font-weight: 700;
+    font-size: $large;
+    font-family: "AvenirNext LT Pro";
+    @include tablet {
+      line-height: 44px;
+    }
+    @include desktop {
+      line-height: 34px;
+    }
+  }
+  &--medium {
+    font-weight: 600;
+    font-size: $medium;
+    line-height: 44px;
+    font-family: "AvenirNext LT Pro";
+  }
+  &--small {
+    font-family: "AvenirNext LT Pro";
+    font-size: $small;
+    line-height: 44px;
+  }
+  &--vsmall {
+    font-family: "AvenirNext LT Pro";
+    font-size: $vsmall;
+    line-height: 44px;
+  }
+}

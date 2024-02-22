@@ -63,6 +63,62 @@ img {
   }
 }
 
+.headline--silver {
+  color: #afafaf;
+}
+.headline--margin-top {
+  margin-top: 3rem;
+}
+.headline--margin-bottom {
+  margin-bottom: 2rem;
+}
+.headline--vlarge {
+  font-weight: 700;
+  font-size: 2rem;
+  font-family: "AvenirNext LT Pro";
+}
+@media (min-width: 767px) {
+  .headline--vlarge {
+    font-size: 3rem;
+  }
+}
+@media (min-width: 1280px) {
+  .headline--vlarge {
+    font-size: 2rem;
+  }
+}
+.headline--large {
+  font-weight: 700;
+  font-size: 2rem;
+  font-family: "AvenirNext LT Pro";
+}
+@media (min-width: 767px) {
+  .headline--large {
+    line-height: 44px;
+  }
+}
+@media (min-width: 1280px) {
+  .headline--large {
+    line-height: 34px;
+  }
+}
+.headline--medium {
+  font-weight: 600;
+  font-size: 1.5rem;
+  line-height: 44px;
+  font-family: "AvenirNext LT Pro";
+}
+.headline--small {
+  font-family: "AvenirNext LT Pro";
+  font-size: 1rem;
+  line-height: 44px;
+}
+.headline--vsmall {
+  font-family: "AvenirNext LT Pro";
+  font-size: 0.8rem;
+  line-height: 44px;
+}
+
 /*Overall Section wrapper*/
 .wrapper {
   overflow: hidden;
@@ -133,38 +189,12 @@ img {
   }
 }
 .site-header__input--button {
-  height: 3rem;
-  background-color: #0065ad;
-  color: #fff;
-  font-size: 1rem;
-  font-weight: 600;
-  line-height: 1.5rem;
-  padding: 0 3rem;
-  border-radius: 5px;
-  text-align: center;
-  border: 1px solid #0095ff;
-  font-family: "AvenirNext LT Pro";
-  background-image: url("../../src/assets/icons/upload.svg");
   background-size: contain;
   background-repeat: no-repeat;
   background-position: left center;
   background-size: 1.5rem 1.5rem;
   width: 100%;
-}
-@media (min-width: 767px) {
-  .site-header__input--button {
-    margin: auto;
-    height: 3rem;
-    width: 10rem;
-  }
-}
-@media (min-width: 1280px) {
-  .site-header__input--button {
-    height: 2.5rem;
-    width: 9rem;
-    font-size: 0.8rem;
-    font-weight: 600;
-  }
+  background-image: url("../../src/assets/icons/upload.svg");
 }
 .site-header__input--search {
   border: 1px solid #afafaf;
@@ -216,4 +246,359 @@ img {
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+}
+
+.button {
+  background-color: #0065ad;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.5rem;
+  height: 3rem;
+  padding: 0 3rem;
+  border-radius: 5px;
+  text-align: center;
+  border: 1px solid #0095ff;
+  font-family: "AvenirNext LT Pro";
+  width: 100%;
+}
+@media (min-width: 767px) {
+  .button {
+    margin: auto;
+    height: 3rem;
+    width: 10rem;
+  }
+}
+@media (min-width: 1280px) {
+  .button {
+    height: 2.5rem;
+    font-size: 0.8rem;
+    font-weight: 600;
+    width: 9rem;
+  }
+}
+
+.large-hero {
+  margin-top: 1.5rem;
+  position: relative;
+  width: 100%;
+}
+@media (min-width: 767px) {
+  .large-hero {
+    margin-top: 0;
+  }
+}
+.large-hero__video {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  height: 15rem;
+}
+@media (min-width: 767px) {
+  .large-hero__video {
+    height: 31.25rem;
+  }
+}
+.large-hero__video:focus {
+  outline-width: 0;
+}
+
+.AI-Container {
+  display: flex;
+  flex-direction: column;
+  margin-top: 3rem;
+  margin-bottom: 2rem;
+}
+@media (min-width: 767px) {
+  .AI-Container {
+    display: flex;
+    flex-direction: column;
+  }
+}
+@media (min-width: 1280px) {
+  .AI-Container {
+    display: flex;
+  }
+}
+.AI-Container__future {
+  border-top: 2px solid #afafaf;
+  padding-top: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 2px solid #afafaf;
+}
+@media (min-width: 767px) {
+  .AI-Container__future {
+    border-top: 0;
+  }
+}
+.AI-Container__future--one {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 10px;
+}
+@media (min-width: 767px) {
+  .AI-Container__future--one {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+.AI-Container__future--two {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 10px;
+}
+@media (min-width: 767px) {
+  .AI-Container__future--two {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+.AI-Container__future-by {
+  padding-bottom: 1.5rem;
+  margin-right: 3rem;
+  text-align: center;
+}
+@media (min-width: 767px) {
+  .AI-Container__future-by {
+    padding-bottom: 0;
+  }
+}
+.AI-Container__future--icon {
+  padding-right: 0.5rem;
+  width: 3rem;
+  height: 3rem;
+}
+.AI-Container__future-view {
+  display: flex;
+  padding-bottom: 1.5rem;
+  margin-right: 3rem;
+}
+@media (min-width: 767px) {
+  .AI-Container__future-view {
+    padding-bottom: 0;
+  }
+}
+.AI-Container__future-like {
+  display: flex;
+  margin-right: 3rem;
+}
+.AI-Container__description--text {
+  margin-top: 2rem;
+  font-size: 1.5rem;
+  font-family: "AvenirNext LT Pro";
+  margin-bottom: 0;
+}
+
+.comment__container {
+  display: flex;
+  flex-direction: row;
+}
+@media (min-width: 767px) {
+  .comment__container {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 1rem;
+    flex-direction: row;
+  }
+}
+.comment__container--avatar {
+  width: 2rem;
+  height: 2rem;
+  overflow: hidden;
+  border-radius: 50%;
+  margin-top: 3rem;
+  margin-right: 1rem;
+}
+@media (min-width: 767px) {
+  .comment__container--avatar {
+    margin-top: 4rem;
+    margin-right: 1.5rem;
+    width: 4rem;
+    height: 4rem;
+  }
+}
+@media (min-width: 1280px) {
+  .comment__container--avatar {
+    width: 4rem;
+    height: 4rem;
+  }
+}
+.comment__container--avatar-img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.comment__container--form {
+  flex-grow: 6;
+  display: flex;
+  flex-direction: column;
+}
+@media (min-width: 767px) {
+  .comment__container--form {
+    padding-top: 0.8rem;
+    flex-direction: row;
+    padding-right: 2rem;
+  }
+}
+@media (min-width: 1280px) {
+  .comment__container--form {
+    padding-right: 0;
+  }
+}
+.comment__container--form-inputlab {
+  flex-grow: 6;
+  display: flex;
+  flex-direction: column;
+}
+@media (min-width: 767px) {
+  .comment__container--form-inputlab {
+    margin-right: 3rem;
+  }
+}
+.comment__container--form-label {
+  display: block;
+  margin-bottom: 10px;
+  font-weight: 600;
+  width: 100%;
+  margin: 0 0 0.5rem 0;
+  text-transform: uppercase;
+  color: #afafaf;
+}
+.comment__container--form-input {
+  width: 100%;
+  padding: 1rem;
+  margin-bottom: 0.8rem;
+  margin-right: 2rem;
+  border-radius: 0.25rem;
+  background-color: #fafafa;
+  border: 1px solid #e1e1e1;
+  resize: none;
+  font-family: "AvenirNext LT Pro";
+}
+@media (min-width: 767px) {
+  .comment__container--form-input {
+    padding: 1.5rem;
+  }
+}
+@media (min-width: 1280px) {
+  .comment__container--form-input {
+    padding: 1rem;
+  }
+}
+.comment__container--form-input#name {
+  font-size: 1rem;
+}
+.comment__container--form-input#comment {
+  font-size: 1rem;
+}
+.comment__container--form-input::-moz-placeholder {
+  color: black;
+}
+.comment__container--form-input::placeholder {
+  color: black;
+}
+.comment__container--form-input:focus {
+  border: 2px solid #e1e1e1;
+  outline-width: 0;
+}
+.comment__container--form-button {
+  text-transform: uppercase;
+  background: url("../../src/assets/icons/add_comment.svg");
+  background-color: #0065ad;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.5rem;
+  height: 4rem;
+  padding: 0 3rem;
+  border-radius: 5px;
+  text-align: center;
+  border: 1px solid #0095ff;
+  font-family: "AvenirNext LT Pro";
+  width: 100%;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: 5% center;
+  background-size: 1.5rem 1.5rem;
+  width: 100%;
+  margin-bottom: 2rem;
+}
+@media (min-width: 767px) {
+  .comment__container--form-button {
+    margin-top: 3.3rem;
+    height: 4rem;
+    width: 10rem;
+  }
+}
+@media (min-width: 1280px) {
+  .comment__container--form-button {
+    height: 3rem;
+    font-size: 0.8rem;
+    font-weight: 600;
+    width: 9rem;
+  }
+}
+.comment__default-line {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #afafaf;
+  border-top: 1px solid #afafaf;
+  padding-bottom: 1.5rem;
+  padding-top: 0.8rem;
+}
+.comment__default-avatar {
+  padding-left: 36px;
+  background-color: #afafaf;
+  width: 2.25rem;
+  height: 2.25rem;
+  overflow: hidden;
+  border-radius: 50%;
+  margin-top: 1rem;
+  margin-right: 1rem;
+}
+@media (min-width: 767px) {
+  .comment__default-avatar {
+    padding-left: 50px;
+    width: 3rem;
+    height: 3rem;
+    margin-right: 1rem;
+  }
+}
+.comment__default-avatar-img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.comment__default-textarea {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 6;
+  padding-top: 1rem;
+}
+.comment__default-HD {
+  display: flex;
+  justify-content: space-between;
+}
+.comment__default--header {
+  font-family: "AvenirNext LT Pro";
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 0.8rem;
+}
+.comment__default--date {
+  font-family: "AvenirNext LT Pro";
+  font-size: 1rem;
+  color: #afafaf;
+}
+.comment__default--text {
+  word-wrap: break-word;
+  color: #000;
+  font-family: "AvenirNext LT Pro";
+  font-size: 1rem;
+  margin-top: 0.8rem;
 }/*# sourceMappingURL=main.css.map */

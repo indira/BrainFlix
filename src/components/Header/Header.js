@@ -1,6 +1,6 @@
 import Logo from "../../assets/logo/BrainFlix-logo.svg"
 import Avatar from "../../assets/images/mohan-muruge.jpg"
-function Header() {
+const Header = () => {
   return (
     <header>
       <div className="wrapper">
@@ -13,12 +13,12 @@ function Header() {
             <div className="site-header__avatar hidden">
               <img className="site-header__avatar--img" src={Avatar} alt="Image" />
             </div>
-            <button className="site-header__input--button hidden1">UPLOAD</button>
+            <button className="site-header__input--button button hidden1">UPLOAD</button>
           </div>
           <div className="site-header__avatar">
             <img className="site-header__avatar--img hidden1" src={Avatar} alt="Image" />
           </div>
-          <button className="site-header__input--button hidden">UPLOAD</button>
+          <button className="site-header__input--button button hidden">UPLOAD</button>
         </div>
       </div>
     </header>

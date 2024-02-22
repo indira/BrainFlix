@@ -1,0 +1,19 @@
+.large-hero {
+  margin-top: $medium;
+  position: relative;
+  width: 100%;
+  @include tablet {
+    margin-top: 0;
+  }
+  &__video {
+    width: 100%;
+    object-fit: cover;
+    height: 15rem;
+    @include tablet {
+      height: 31.25rem;
+    }
+    &:focus {
+      outline-width: 0;
+    }
+  }
+}

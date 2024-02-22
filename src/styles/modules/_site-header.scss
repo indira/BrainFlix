@@ -36,35 +36,12 @@
       padding-left: 18rem;
     }
     &--button {
-      height: $vlarge;
-      background-color: $secondary-blue;
-      color: $primary-white;
-      font-size: $small;
-      font-weight: 600;
-      line-height: $medium;
-      padding: 0 $vlarge;
-      border-radius: 5px;
-      text-align: center;
-      border: 1px solid $primary-blue;
-      font-family: "AvenirNext LT Pro";
-      background-image: url("../../src/assets/icons/upload.svg");
       background-size: contain;
       background-repeat: no-repeat;
       background-position: left center;
       background-size: $medium $medium;
       width: 100%;
-
-      @include tablet {
-        margin: auto;
-        height: $vlarge;
-        width: 10rem;
-      }
-      @include desktop {
-        height: 2.5rem;
-        width: 9rem;
-        font-size: $vsmall;
-        font-weight: 600;
-      }
+      background-image: url("../../src/assets/icons/upload.svg");
     }
     &--search {
       border: 1px solid $primary-silver;
