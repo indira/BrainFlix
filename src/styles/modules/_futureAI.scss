@@ -79,3 +79,9 @@
     }
   }
 }
+.test {
+  @include desktop {
+    display: flex;
+    justify-content: space-between;
+  }
+}

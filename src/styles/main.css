@@ -88,9 +88,12 @@ img {
   }
 }
 .headline--large {
-  font-weight: 700;
+  font-weight: 600;
   font-size: 2rem;
   font-family: "AvenirNext LT Pro";
+}
+.headline--large--big {
+  font-weight: 700;
 }
 @media (min-width: 767px) {
   .headline--large {
@@ -103,10 +106,12 @@ img {
   }
 }
 .headline--medium {
-  font-weight: 600;
   font-size: 1.5rem;
   line-height: 44px;
   font-family: "AvenirNext LT Pro";
+}
+.headline--medium--big {
+  font-weight: 600;
 }
 .headline--small {
   font-family: "AvenirNext LT Pro";
@@ -392,6 +397,13 @@ img {
   margin-bottom: 0;
 }
 
+@media (min-width: 1280px) {
+  .test {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
 .comment__container {
   display: flex;
   flex-direction: row;
@@ -601,4 +613,29 @@ img {
   font-family: "AvenirNext LT Pro";
   font-size: 1rem;
   margin-top: 0.8rem;
+}
+
+.videos-container {
+  display: flex;
+  margin-bottom: 8rem;
+}
+.videos-container__picture {
+  width: 300px;
+  height: 150px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 5%;
+  overflow: hidden;
+}
+.videos-container__text {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-left: 2rem;
+}
+.videos-container__text--heading {
+  font-weight: 600;
+}
+.videos-container__text--description {
+  font-weight: 400;
 }/*# sourceMappingURL=main.css.map */

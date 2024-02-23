@@ -21,9 +21,12 @@
     }
   }
   &--large {
-    font-weight: 700;
+    font-weight: 600;
     font-size: $large;
     font-family: "AvenirNext LT Pro";
+    &--big {
+      font-weight: 700;
+    }
     @include tablet {
       line-height: 44px;
     }
@@ -32,10 +35,12 @@
     }
   }
   &--medium {
-    font-weight: 600;
     font-size: $medium;
     line-height: 44px;
     font-family: "AvenirNext LT Pro";
+    &--big {
+      font-weight: 600;
+    }
   }
   &--small {
     font-family: "AvenirNext LT Pro";
