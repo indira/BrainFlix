@@ -1,13 +1,14 @@
 .large-hero {
+  display: flex;
   margin-top: $medium;
   position: relative;
-  width: 100%;
+  flex-grow: 1;
   @include tablet {
     margin-top: 0;
   }
   &__video {
     width: 100%;
-    object-fit: cover;
+    background: black;
     height: 15rem;
     @include tablet {
       height: 31.25rem;

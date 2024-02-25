@@ -1,9 +1,11 @@
 import avatar from "../../assets/images/mohan-muruge.jpg"
-const Comments = () => {
+const Comments = props => {
+  const comments = props.comments
+  const formatDate = props.formatDate
   return (
     <section>
       <div className="comment">
-        <h2 className="headline-medium headline--margin-bottom">3 Comments</h2>
+        <h2 className="headline-medium headline--margin-bottom">{comments.length} Comments</h2>
         <div className="comment__container">
           <div className="comment__container--avatar">
             <img className="comment__container-avatar-img" src={avatar} alt="Image" />
@@ -20,18 +22,20 @@ const Comments = () => {
             </button>
           </form>
         </div>
-        <div className="comment__default">
-          <div className="comment__default-line">
-            <div className="comment__default-avatar">Avatar</div>
-            <div className="comment__default-textarea">
-              <div className="comment__default-HD">
-                <div className="comment__default--header">Name</div>
-                <div className="comment__default--date">Date</div>
+        {comments.map(comment => (
+          <div className="comment__default" key={comment.id}>
+            <div className="comment__default-line">
+              <div className="comment__default-avatar">Avatar</div>
+              <div className="comment__default-textarea">
+                <div className="comment__default-HD">
+                  <div className="comment__default--header">{comment.name}</div>
+                  <div className="comment__default--date">{formatDate(comment.timestamp)}</div>
+                </div>
+                <div className="comment__default--text">{comment.comment}</div>
               </div>
-              <div className="comment__default--text">Comment</div>
             </div>
           </div>
-        </div>
+        ))}
       </div>
     </section>
   )

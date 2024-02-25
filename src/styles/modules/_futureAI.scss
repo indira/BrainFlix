@@ -71,10 +71,11 @@
     }
   }
   &__description {
+    font-family: "AvenirNext LT Pro";
     &--text {
       margin-top: $large;
-      font-size: $medium;
-      font-family: "AvenirNext LT Pro";
+      font-size: 1.5rem;
+      font-weight: 300;
       margin-bottom: 0;
     }
   }

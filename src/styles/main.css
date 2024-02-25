@@ -2,10 +2,16 @@
 /*Colors Variables*/
 /*mixins variables*/
 /*Fonts*/
-/*Fonts used in the site*/
 @font-face {
   font-family: "AvenirNext LT Pro";
-  src: url("../../src/assets/fonts/AvenirNextLTPro-Demi.woff") format("woff2"), url("../../src/assets/fonts/AvenirNextLTPro-Demi.woff") format("woff");
+  src: url("../../src/assets/fonts/AvenirNextLTPro-Regular.woff2") format("woff2"), url("../../src/assets/fonts/AvenirNextLTPro-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "AvenirNext LT Pro";
+  src: url("../../src/assets/fonts/AvenirNextLTPro-Demi.woff2") format("woff2"), url("../../src/assets/fonts/AvenirNextLTPro-Demi.woff") format("woff");
   font-weight: 600;
   font-style: normal;
   font-display: swap;
@@ -14,13 +20,6 @@
   font-family: "AvenirNext LT Pro";
   src: url("../../src/assets/fonts/AvenirNextLTPro-Bold.woff2") format("woff2"), url("../../src/assets/fonts/AvenirNextLTPro-Bold.woff") format("woff");
   font-weight: 700;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: "AvenirNext LT Pro";
-  src: url("../../src/assets/fonts/AvenirNextLTPro-Regular.woff2") format("woff2"), url("../../src/assets/fonts/AvenirNextLTPro-Regular.woff") format("woff");
-  font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
@@ -34,10 +33,11 @@ html {
 * {
   box-sizing: border-box;
   margin: 0;
+  padding: 0;
 }
 
 body {
-  font-family: "AvenirNext LT Pro", sans-serif;
+  font-family: "AvenirNext LT Pro", Montserrat, Lato, "Open Sans", sans-serif;
 }
 
 img {
@@ -79,11 +79,6 @@ img {
 }
 @media (min-width: 767px) {
   .headline--vlarge {
-    font-size: 3rem;
-  }
-}
-@media (min-width: 1280px) {
-  .headline--vlarge {
     font-size: 2rem;
   }
 }
@@ -109,12 +104,12 @@ img {
   font-size: 1.5rem;
   line-height: 44px;
   font-family: "AvenirNext LT Pro";
+  font-weight: 400;
 }
 .headline--medium--big {
   font-weight: 600;
 }
 .headline--small {
-  font-family: "AvenirNext LT Pro";
   font-size: 1rem;
   line-height: 44px;
 }
@@ -284,9 +279,10 @@ img {
 }
 
 .large-hero {
+  display: flex;
   margin-top: 1.5rem;
   position: relative;
-  width: 100%;
+  flex-grow: 1;
 }
 @media (min-width: 767px) {
   .large-hero {
@@ -295,8 +291,7 @@ img {
 }
 .large-hero__video {
   width: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  background: black;
   height: 15rem;
 }
 @media (min-width: 767px) {
@@ -390,10 +385,13 @@ img {
   display: flex;
   margin-right: 3rem;
 }
+.AI-Container__description {
+  font-family: "AvenirNext LT Pro";
+}
 .AI-Container__description--text {
   margin-top: 2rem;
   font-size: 1.5rem;
-  font-family: "AvenirNext LT Pro";
+  font-weight: 300;
   margin-bottom: 0;
 }
 
