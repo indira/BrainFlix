@@ -18,8 +18,8 @@ const NextVideos = props => {
                 <img src={video.image} alt="videoImg" />
               </div>
               <div className="videos-container__text">
-                <div className="videos-container__text--heading headline--medium">{video.channel}</div>
-                <div className="videos-container__text--description headline--medium">{video.title}</div>
+                <div className="videos-container__text--heading">{video.channel}</div>
+                <div className="videos-container__text--description">{video.title}</div>
               </div>
             </div>
           ))}

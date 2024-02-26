@@ -4,14 +4,18 @@
   margin-bottom: 2rem;
 
   &__picture {
-    width: 250px;
-    height: 150px;
+    width: 120px;
+    height: 80px;
     object-fit: cover;
     border-radius: 5%;
     overflow: hidden;
+    @include tablet {
+      width: 250px;
+      height: 150px;
+    }
     @include desktop {
-      width: 150px;
-      height: 100px;
+      width: 100px;
+      height: 70px;
     }
   }
   &__text {
@@ -19,14 +23,30 @@
     flex-direction: column;
     justify-content: space-between;
     padding-left: $large;
+    font-family: "AvenirNext LT Pro";
     @include desktop {
       flex-grow: 4;
+      padding-left: $vsmall;
     }
     &--heading {
       font-weight: 600;
+      font-size: $small;
+      @include tablet {
+        font-size: 1.3rem;
+      }
+      @include desktop {
+        font-size: 1rem;
+      }
     }
     &--description {
       font-weight: 400;
+      font-size: 1rem;
+      @include tablet {
+        font-size: 1.3rem;
+      }
+      @include desktop {
+        font-size: 1rem;
+      }
     }
   }
 }
