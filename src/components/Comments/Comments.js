@@ -5,7 +5,7 @@ const Comments = props => {
   return (
     <section>
       <div className="comment">
-        <h2 className="headline-medium headline--margin-bottom">{comments.length} Comments</h2>
+        <h2 className="headline-medium ">{comments.length} Comments</h2>
         <div className="comment__container">
           <div className="comment__container--avatar">
             <img className="comment__container-avatar-img" src={avatar} alt="Image" />

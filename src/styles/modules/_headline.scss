@@ -37,6 +37,9 @@
     font-family: "AvenirNext LT Pro";
     font-weight: 400;
     &--big {
+      font-size: $medium;
+      line-height: 44px;
+      font-family: "AvenirNext LT Pro";
       font-weight: 600;
     }
   }

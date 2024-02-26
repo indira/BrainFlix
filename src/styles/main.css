@@ -107,6 +107,9 @@ img {
   font-weight: 400;
 }
 .headline--medium--big {
+  font-size: 1.5rem;
+  line-height: 44px;
+  font-family: "AvenirNext LT Pro";
   font-weight: 600;
 }
 .headline--small {
@@ -329,6 +332,7 @@ img {
 }
 @media (min-width: 767px) {
   .AI-Container__future {
+    padding-top: 0;
     border-top: 0;
   }
 }
@@ -393,13 +397,6 @@ img {
   font-size: 1.5rem;
   font-weight: 300;
   margin-bottom: 0;
-}
-
-@media (min-width: 1280px) {
-  .test {
-    display: flex;
-    justify-content: space-between;
-  }
 }
 
 .comment__container {
@@ -615,7 +612,7 @@ img {
 
 .videos-container {
   display: flex;
-  margin-bottom: 8rem;
+  margin-bottom: 2rem;
 }
 .videos-container__picture {
   width: 300px;

@@ -71,6 +71,7 @@
         border: 1px solid $secondary-mercury;
         resize: none;
         font-family: "AvenirNext LT Pro";
+
         @include tablet {
           padding: $medium;
         }

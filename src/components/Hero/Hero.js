@@ -6,8 +6,10 @@ import Comments from "../Comments/Comments"
 
 const Hero = props => {
   //console.log("selectedCharacter: ", props.selectedVideo.video)
-  const videoURL = `${props.selectedVideo.video}?api_key=${props.selectedVideo.id}`
+  //const videoURL = `${props.selectedVideo.video}?api_key=${props.selectedVideo.id}`
+  const videoURL = `${props.selectedVideo.image}`
   const comments = props.selectedVideo.comments
+  console.log(videoURL)
 
   const formatDate = timestamp => {
     const date = new Date(timestamp)
@@ -20,17 +22,18 @@ const Hero = props => {
   return (
     <section>
       <div className="large-hero">
-        <video className="large-hero__video" controls>
+        {/* <video className="large-hero__video" controls>
           <source src={videoURL} type="video/mp4" />
           Your browser does not support the video tag.
-        </video>
+        </video>*/}
+        <video poster={videoURL} className="large-hero__video" controls></video>
       </div>
       <div className="wrapper">
         <div className="headline--vlarge headline--margin-top ">{props.selectedVideo.title}</div>
         <div className="AI-Container">
           <div className="AI-Container__future">
             <div className="AI-Container__future--one">
-              <div className="AI-Container__future-by headline--medium">By {props.selectedVideo.channel}</div>
+              <div className="AI-Container__future-by headline--medium--big">By {props.selectedVideo.channel}</div>
               <div className="AI-Container__future-date headline--medium headline--silver">{formatDate(props.selectedVideo.timestamp)}</div>
             </div>
             <div className="AI-Container__future--two headline--silver">
