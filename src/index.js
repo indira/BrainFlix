@@ -15,6 +15,7 @@ function App() {
   const [selectedVideo, setSelectedVideo] = useState(videoData[0])
   const [videos, setVideos] = useState(videoData)
   const comments = selectedVideo.comments
+  //HandleClick function for state change while clicking the image in the NextVideo section
   function handleVideoClick(id) {
     const clickedVideo = videos.find(video => {
       return video.id === id
@@ -23,6 +24,7 @@ function App() {
 
     setSelectedVideo(clickedVideo)
   }
+  //format date function to format the date
   const formatDate = timestamp => {
     const date = new Date(timestamp)
     const day = date.getDate()
@@ -30,7 +32,7 @@ function App() {
     const year = date.getFullYear()
     return `${month}/${day}/${year}`
   }
-
+  //The page is divided into four components Header, Hero, Comments and NextVideos
   return (
     <>
       <Header />

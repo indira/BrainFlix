@@ -1,3 +1,4 @@
+/*This component is designed to show the video image and is clickable*/
 const NextVideos = props => {
   return (
     <section>

@@ -1,7 +1,9 @@
+/*Importing all the styles in main.scss file and importing the main.css file to the index.js file to organize the styling*/
 @import "normalize.css";
 /*Colors Variables*/
 /*mixins variables*/
 /*Fonts*/
+/* Calling and styling the fonts used in the page*/
 @font-face {
   font-family: "AvenirNext LT Pro";
   src: url("../../src/assets/fonts/AvenirNextLTPro-Regular.woff2") format("woff2"), url("../../src/assets/fonts/AvenirNextLTPro-Regular.woff") format("woff");
@@ -63,6 +65,7 @@ img {
   }
 }
 
+/*This is for the fonts and stylings of the title, subtitle and paragraphs*/
 .headline--silver {
   color: #afafaf;
 }
@@ -283,6 +286,7 @@ img {
      object-fit: cover;
 }
 
+/*Button styline for the header button*/
 .button {
   background-color: #0065ad;
   color: #fff;
@@ -313,6 +317,7 @@ img {
   }
 }
 
+/*This is for the large hero section*/
 .large-hero {
   display: flex;
   margin-top: 1.5rem;
@@ -338,6 +343,7 @@ img {
   outline-width: 0;
 }
 
+/*This is for the comments and the like and views section of the page*/
 .AI-Container {
   display: flex;
   flex-direction: column;
@@ -437,6 +443,7 @@ img {
   }
 }
 
+/*This is for the comment section of the page*/
 .comment__container {
   display: flex;
   flex-direction: row;
@@ -658,6 +665,7 @@ img {
   margin-top: 0.8rem;
 }
 
+/*This is for the NEXTVIDEOS section styling*/
 .videos-container {
   display: flex;
   margin-bottom: 2rem;

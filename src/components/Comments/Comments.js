@@ -1,6 +1,7 @@
 import avatar from "../../assets/images/mohan-muruge.jpg"
 import views from "../../assets/icons/views.svg"
 import likes from "../../assets/icons/likes.svg"
+/*This component is for the comment section of the page*/
 const Comments = props => {
   const comments = props.comments
   const formatDate = props.formatDate

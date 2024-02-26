@@ -1,5 +1,6 @@
 import Logo from "../../assets/logo/BrainFlix-logo.svg"
 import Avatar from "../../assets/images/mohan-muruge.jpg"
+/*This component is for the header section of the page*/
 const Header = () => {
   return (
     <header>

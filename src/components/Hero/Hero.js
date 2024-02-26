@@ -1,5 +1,5 @@
 import Comments from "../Comments/Comments"
-
+/*This component is for displaying the selected video in the hero section of the page*/
 const Hero = props => {
   //console.log("selectedCharacter: ", props.selectedVideo.video)
   //const videoURL = `${props.selectedVideo.video}?api_key=${props.selectedVideo.id}`
@@ -10,10 +10,6 @@ const Hero = props => {
   return (
     <section>
       <div className="large-hero">
-        {/* <video className="large-hero__video" controls>
-          <source src={videoURL} type="video/mp4" />
-          Your browser does not support the video tag.
-        </video>*/}
         <video poster={videoURL} className="large-hero__video" controls></video>
       </div>
     </section>
