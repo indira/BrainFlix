@@ -75,9 +75,13 @@
     font-family: "AvenirNext LT Pro";
     &--text {
       margin-top: $large;
-      font-size: 1.5rem;
+      font-size: $medium;
       font-weight: 300;
       margin-bottom: 0;
+      @include desktop {
+        font-size: $small;
+        padding-right: $medium;
+      }
     }
   }
 }

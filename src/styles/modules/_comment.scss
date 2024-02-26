@@ -8,6 +8,9 @@
       padding-top: $small;
       flex-direction: row;
     }
+    @include desktop {
+      padding-right: $medium;
+    }
     &--avatar {
       width: $large;
       height: $large;
@@ -158,6 +161,9 @@
       }
     }
     &-textarea {
+      @include desktop {
+        padding-right: $medium;
+      }
       display: flex;
       flex-direction: column;
       flex-grow: 6;

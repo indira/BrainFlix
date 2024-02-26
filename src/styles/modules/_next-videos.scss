@@ -1,23 +1,53 @@
 .videos-container {
   display: flex;
   margin-bottom: 2rem;
+
   &__picture {
-    width: 300px;
+    width: 250px;
     height: 150px;
     object-fit: cover;
     border-radius: 5%;
     overflow: hidden;
+    @include desktop {
+      width: 150px;
+      height: 100px;
+    }
   }
   &__text {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     padding-left: $large;
+    @include desktop {
+      flex-grow: 4;
+    }
     &--heading {
       font-weight: 600;
     }
     &--description {
       font-weight: 400;
+    }
+  }
+}
+.test {
+  display: flex;
+  flex-direction: column;
+
+  @include desktop {
+    display: flex;
+    flex-direction: row;
+  }
+  &--test1 {
+    flex: 0;
+    @include desktop {
+      flex: 3;
+    }
+  }
+  &--test2 {
+    flex: 0;
+    @include desktop {
+      flex: 2;
+      border-left: 1px solid $primary-silver;
     }
   }
 }

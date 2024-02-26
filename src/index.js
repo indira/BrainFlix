@@ -3,8 +3,9 @@ import ReactDOM from "react-dom/client"
 import { useState } from "react"
 import Header from "./components/Header/Header"
 import Hero from "./components/Hero/Hero"
-import videoData from "../src/assets/data/video-details.json"
+import videoData from "./data/video-details.json"
 import NextVideos from "./components/NextVideos/NextVideos"
+import Comments from "./components/Comments/Comments"
 
 //Calling the stylesheet
 import "../src/styles/main.css"
@@ -13,7 +14,7 @@ function App() {
   //State Variables
   const [selectedVideo, setSelectedVideo] = useState(videoData[0])
   const [videos, setVideos] = useState(videoData)
-
+  const comments = selectedVideo.comments
   function handleVideoClick(id) {
     const clickedVideo = videos.find(video => {
       return video.id === id
@@ -22,12 +23,26 @@ function App() {
 
     setSelectedVideo(clickedVideo)
   }
+  const formatDate = timestamp => {
+    const date = new Date(timestamp)
+    const day = date.getDate()
+    const month = date.getMonth() + 1
+    const year = date.getFullYear()
+    return `${month}/${day}/${year}`
+  }
 
   return (
     <>
       <Header />
-      <Hero selectedVideo={selectedVideo} handleVideoClick={handleVideoClick} />
-      <NextVideos videos={videos} selectedVideo={selectedVideo} handleVideoClick={handleVideoClick} />
+      <Hero selectedVideo={selectedVideo} handleVideoClick={handleVideoClick} formatDate={formatDate} />
+      <div className="test">
+        <div className="test--test1">
+          <Comments comments={comments} formatDate={formatDate} selectedVideo={selectedVideo} handleVideoClick={handleVideoClick} />
+        </div>
+        <div className="test--test2">
+          <NextVideos videos={videos} selectedVideo={selectedVideo} handleVideoClick={handleVideoClick} />
+        </div>
+      </div>
     </>
   )
 }

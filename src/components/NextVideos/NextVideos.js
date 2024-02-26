@@ -1,9 +1,7 @@
-import data from "../../assets/data/videos.json"
-console.log(data[0].image)
 const NextVideos = props => {
   return (
     <section>
-      <div className="wrapper">
+      <div className="wrapper--next">
         <div className="headline--large headline--silver headline--margin-top headline--margin-bottom">NEXT VIDEOS</div>
         {props.videos
           .filter(video => video.id !== props.selectedVideo.id)

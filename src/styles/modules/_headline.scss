@@ -29,6 +29,7 @@
     }
     @include desktop {
       line-height: 34px;
+      font-size: $medium;
     }
   }
   &--medium {
@@ -36,6 +37,9 @@
     line-height: 44px;
     font-family: "AvenirNext LT Pro";
     font-weight: 400;
+    @include desktop {
+      font-size: $small;
+    }
     &--big {
       font-size: $medium;
       line-height: 44px;

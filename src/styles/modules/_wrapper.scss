@@ -13,4 +13,27 @@
     padding-left: $vlarge;
     padding-right: $vlarge;
   }
+  &--comment {
+    overflow: hidden;
+    padding-left: $small;
+    padding-right: $small;
+    margin-left: auto;
+    margin-right: auto;
+
+    @include desktop {
+      padding-left: 4rem;
+      padding-right: 0;
+    }
+  }
+  &--next {
+    overflow: hidden;
+    padding-left: $small;
+    padding-right: $small;
+    margin-left: auto;
+    margin-right: auto;
+    @include desktop {
+      padding-left: 1rem;
+      padding-right: 4rem;
+    }
+  }
 }
