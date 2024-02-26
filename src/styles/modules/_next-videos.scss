@@ -50,25 +50,3 @@
     }
   }
 }
-.test {
-  display: flex;
-  flex-direction: column;
-
-  @include desktop {
-    display: flex;
-    flex-direction: row;
-  }
-  &--test1 {
-    flex: 0;
-    @include desktop {
-      flex: 3;
-    }
-  }
-  &--test2 {
-    flex: 0;
-    @include desktop {
-      flex: 2;
-      border-left: 1px solid $primary-silver;
-    }
-  }
-}

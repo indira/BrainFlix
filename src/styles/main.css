@@ -343,6 +343,34 @@ img {
   outline-width: 0;
 }
 
+.comment-next-outer {
+  display: flex;
+  flex-direction: column;
+}
+@media (min-width: 1280px) {
+  .comment-next-outer {
+    display: flex;
+    flex-direction: row;
+  }
+}
+.comment-next-outer--one {
+  flex: 0;
+}
+@media (min-width: 1280px) {
+  .comment-next-outer--one {
+    flex: 3;
+  }
+}
+.comment-next-outer--two {
+  flex: 0;
+}
+@media (min-width: 1280px) {
+  .comment-next-outer--two {
+    flex: 2;
+    border-left: 1px solid #afafaf;
+  }
+}
+
 /*This is for the comments and the like and views section of the page*/
 .AI-Container {
   display: flex;
@@ -728,33 +756,5 @@ img {
 @media (min-width: 1280px) {
   .videos-container__text--description {
     font-size: 1rem;
-  }
-}
-
-.test {
-  display: flex;
-  flex-direction: column;
-}
-@media (min-width: 1280px) {
-  .test {
-    display: flex;
-    flex-direction: row;
-  }
-}
-.test--test1 {
-  flex: 0;
-}
-@media (min-width: 1280px) {
-  .test--test1 {
-    flex: 3;
-  }
-}
-.test--test2 {
-  flex: 0;
-}
-@media (min-width: 1280px) {
-  .test--test2 {
-    flex: 2;
-    border-left: 1px solid #afafaf;
   }
 }/*# sourceMappingURL=main.css.map */

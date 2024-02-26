@@ -37,11 +37,11 @@ function App() {
     <>
       <Header />
       <Hero selectedVideo={selectedVideo} handleVideoClick={handleVideoClick} formatDate={formatDate} />
-      <div className="test">
-        <div className="test--test1">
+      <div className="comment-next-outer">
+        <div className="comment-next-outer--one">
           <Comments comments={comments} formatDate={formatDate} selectedVideo={selectedVideo} handleVideoClick={handleVideoClick} />
         </div>
-        <div className="test--test2">
+        <div className="comment-next-outer--two">
           <NextVideos videos={videos} selectedVideo={selectedVideo} handleVideoClick={handleVideoClick} />
         </div>
       </div>
