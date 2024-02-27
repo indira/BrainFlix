@@ -1,0 +1,73 @@
+input {
+  width: 100%;
+  padding: $small;
+  margin-bottom: $vsmall;
+  border-radius: 0.25rem;
+  background-color: $secondary-alabaster;
+  border: 1px solid $secondary-mercury;
+  resize: none;
+  font-family: "AvenirNext LT Pro";
+  &::placeholder {
+    color: black;
+  }
+  &:focus {
+    border: 2px solid $secondary-blue;
+    outline-width: 0;
+  }
+}
+textarea {
+  width: 100%;
+  margin-bottom: $vsmall;
+  border-radius: 0.25rem;
+  background-color: $secondary-alabaster;
+  border: 1px solid $secondary-mercury;
+  resize: none;
+  font-family: "AvenirNext LT Pro";
+  &::placeholder {
+    color: black;
+  }
+  &:focus {
+    border: 2px solid $secondary-blue;
+    outline-width: 0;
+  }
+}
+label {
+  display: block;
+  margin-bottom: 10px;
+  font-weight: 600;
+  width: 100%;
+  margin: 0 0 0.5rem 0;
+  text-transform: uppercase;
+  color: $primary-silver;
+}
+
+button {
+  text-transform: uppercase;
+  background-color: $secondary-blue;
+  color: $primary-white;
+  font-size: $small;
+  font-weight: 600;
+  line-height: $medium;
+  height: $vlarge;
+  padding: 0 $vlarge;
+  border-radius: 5px;
+  text-align: center;
+  border: 1px solid $primary-blue;
+  font-family: "AvenirNext LT Pro";
+  width: 100%;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: 5% center;
+  background-size: $medium $medium;
+  @include tablet {
+    margin: auto;
+    height: $vlarge;
+    width: 10rem;
+  }
+  @include desktop {
+    height: 2.5rem;
+    font-size: $vsmall;
+    font-weight: 600;
+    width: 9rem;
+  }
+}

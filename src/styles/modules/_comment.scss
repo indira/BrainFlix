@@ -55,60 +55,14 @@
           margin-right: $vlarge;
         }
       }
-
-      &-label {
-        display: block;
-        margin-bottom: 10px;
-        font-weight: 600;
-        width: 100%;
-        margin: 0 0 0.5rem 0;
-        text-transform: uppercase;
-        color: $primary-silver;
-      }
-      &-input {
-        width: 100%;
-        padding: $small;
-        margin-bottom: $vsmall;
-        margin-right: $large;
-        border-radius: 0.25rem;
-        background-color: $secondary-alabaster;
-        border: 1px solid $secondary-mercury;
-        resize: none;
-        font-family: "AvenirNext LT Pro";
-        &#name {
-          font-size: $small;
-        }
-        &#comment {
-          font-size: $small;
-        }
-        &::placeholder {
-          color: black;
-        }
-        &:focus {
-          border: 2px solid $secondary-mercury;
-          outline-width: 0;
-        }
-      }
       &-button {
-        text-transform: uppercase;
         background: url("../../src/assets/icons/add_comment.svg");
         background-color: $secondary-blue;
         color: $primary-white;
-        font-size: $small;
-        font-weight: 600;
-        line-height: $medium;
-        height: $vvlarge;
-        padding: 0 $vlarge;
-        border-radius: 5px;
-        text-align: center;
-        border: 1px solid $primary-blue;
-        font-family: "AvenirNext LT Pro";
-        width: 100%;
         background-size: contain;
         background-repeat: no-repeat;
         background-position: 5% center;
         background-size: $medium $medium;
-        width: 100%;
         margin-bottom: $large;
         @include tablet {
           margin-top: 3.3rem;

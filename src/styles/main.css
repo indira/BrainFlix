@@ -47,6 +47,10 @@ img {
   height: 100%;
 }
 
+.noUnderline {
+  text-decoration: none;
+}
+
 .hidden {
   display: block;
 }
@@ -288,6 +292,7 @@ img {
 
 /*Button styline for the header button*/
 .button {
+  text-decoration: none;
   background-color: #0065ad;
   color: #fff;
   font-size: 1rem;
@@ -544,62 +549,14 @@ img {
     margin-right: 3rem;
   }
 }
-.comment__container--form-label {
-  display: block;
-  margin-bottom: 10px;
-  font-weight: 600;
-  width: 100%;
-  margin: 0 0 0.5rem 0;
-  text-transform: uppercase;
-  color: #afafaf;
-}
-.comment__container--form-input {
-  width: 100%;
-  padding: 1rem;
-  margin-bottom: 0.8rem;
-  margin-right: 2rem;
-  border-radius: 0.25rem;
-  background-color: #fafafa;
-  border: 1px solid #e1e1e1;
-  resize: none;
-  font-family: "AvenirNext LT Pro";
-}
-.comment__container--form-input#name {
-  font-size: 1rem;
-}
-.comment__container--form-input#comment {
-  font-size: 1rem;
-}
-.comment__container--form-input::-moz-placeholder {
-  color: black;
-}
-.comment__container--form-input::placeholder {
-  color: black;
-}
-.comment__container--form-input:focus {
-  border: 2px solid #e1e1e1;
-  outline-width: 0;
-}
 .comment__container--form-button {
-  text-transform: uppercase;
   background: url("../../src/assets/icons/add_comment.svg");
   background-color: #0065ad;
   color: #fff;
-  font-size: 1rem;
-  font-weight: 600;
-  line-height: 1.5rem;
-  height: 4rem;
-  padding: 0 3rem;
-  border-radius: 5px;
-  text-align: center;
-  border: 1px solid #0095ff;
-  font-family: "AvenirNext LT Pro";
-  width: 100%;
   background-size: contain;
   background-repeat: no-repeat;
   background-position: 5% center;
   background-size: 1.5rem 1.5rem;
-  width: 100%;
   margin-bottom: 2rem;
 }
 @media (min-width: 767px) {
@@ -756,5 +713,96 @@ img {
 @media (min-width: 1280px) {
   .videos-container__text--description {
     font-size: 1rem;
+  }
+}
+
+.upload-video {
+  display: flex;
+  justify-content: space-between;
+}
+
+input {
+  width: 100%;
+  padding: 1rem;
+  margin-bottom: 0.8rem;
+  border-radius: 0.25rem;
+  background-color: #fafafa;
+  border: 1px solid #e1e1e1;
+  resize: none;
+  font-family: "AvenirNext LT Pro";
+}
+input::-moz-placeholder {
+  color: black;
+}
+input::placeholder {
+  color: black;
+}
+input:focus {
+  border: 2px solid #0065ad;
+  outline-width: 0;
+}
+
+textarea {
+  width: 100%;
+  margin-bottom: 0.8rem;
+  border-radius: 0.25rem;
+  background-color: #fafafa;
+  border: 1px solid #e1e1e1;
+  resize: none;
+  font-family: "AvenirNext LT Pro";
+}
+textarea::-moz-placeholder {
+  color: black;
+}
+textarea::placeholder {
+  color: black;
+}
+textarea:focus {
+  border: 2px solid #0065ad;
+  outline-width: 0;
+}
+
+label {
+  display: block;
+  margin-bottom: 10px;
+  font-weight: 600;
+  width: 100%;
+  margin: 0 0 0.5rem 0;
+  text-transform: uppercase;
+  color: #afafaf;
+}
+
+button {
+  text-transform: uppercase;
+  background-color: #0065ad;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.5rem;
+  height: 3rem;
+  padding: 0 3rem;
+  border-radius: 5px;
+  text-align: center;
+  border: 1px solid #0095ff;
+  font-family: "AvenirNext LT Pro";
+  width: 100%;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: 5% center;
+  background-size: 1.5rem 1.5rem;
+}
+@media (min-width: 767px) {
+  button {
+    margin: auto;
+    height: 3rem;
+    width: 10rem;
+  }
+}
+@media (min-width: 1280px) {
+  button {
+    height: 2.5rem;
+    font-size: 0.8rem;
+    font-weight: 600;
+    width: 9rem;
   }
 }/*# sourceMappingURL=main.css.map */

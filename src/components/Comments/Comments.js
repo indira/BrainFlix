@@ -39,10 +39,10 @@ const Comments = props => {
             </div>
             <form className="comment__container--form" id="commentForm">
               <div className="comment__container--form-inputlab">
-                <label className="comment__container--form-label headline--small" to="name">
+                <label className="headline--small" to="name">
                   Join the Conversation:{" "}
                 </label>
-                <input className="comment__container--form-input" type="text" id="name" name="name" placeholder="Add a new comment." />
+                <input type="text" id="name" name="name" placeholder="Add a new comment." />
               </div>
               <button className="comment__container--form-button" type="submit">
                 Comment
