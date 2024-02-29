@@ -1,11 +1,6 @@
-import Comments from "../Comments/Comments"
 /*This component is for displaying the selected video in the hero section of the page*/
-const Hero = props => {
-  //console.log("selectedCharacter: ", props.selectedVideo.video)
-  //const videoURL = `${props.selectedVideo.video}?api_key=${props.selectedVideo.id}`
-  const videoURL = `${props.selectedVideo.image}`
-  console.log(videoURL)
-  const formatDate = props.formatDate
+const Hero = ({ selectedVideo, formatDate }) => {
+  const videoURL = `${selectedVideo.image}`
 
   return (
     <section>

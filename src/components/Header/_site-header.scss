@@ -41,7 +41,7 @@
       background-position: left center;
       background-size: $medium $medium;
       width: 100%;
-      background-image: url("../../src/assets/icons/upload.svg");
+      background-image: url("../../assets/icons/upload.svg");
     }
     &--search {
       border: 1px solid $primary-silver;
@@ -51,7 +51,7 @@
       width: 90%;
       height: $vlarge;
       margin-right: $large;
-      background-image: url("../../src/assets/icons/search.svg"); /* Replace 'path/to/search-icon.png' with the path to your search icon */
+      background-image: url("../../assets/icons/search.svg"); /* Replace 'path/to/search-icon.png' with the path to your search icon */
       background-size: $medium; /* Adjust the size of the search icon */
       background-repeat: no-repeat; /* Ensure the search icon is not repeated */
       background-position: 5% center;
@@ -60,6 +60,7 @@
       font-size: $small;
       font-weight: 600;
       padding-top: 0;
+      margin-top: $small;
       padding-bottom: 0;
 
       @include tablet {

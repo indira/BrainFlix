@@ -1,6 +1,7 @@
 import React from "react"
 import ReactDOM from "react-dom/client"
 import { useState } from "react"
+import { format } from "date-fns"
 import Hero from "../../components/Hero/Hero"
 import videoData from "../../data/video-details.json"
 import NextVideos from "../../components/NextVideos/NextVideos"
@@ -23,10 +24,8 @@ const HomePage = () => {
   //format date function to format the date
   const formatDate = timestamp => {
     const date = new Date(timestamp)
-    const day = date.getDate()
-    const month = date.getMonth() + 1
-    const year = date.getFullYear()
-    return `${month}/${day}/${year}`
+    const formattedDate = format(date, "MM/dd/yyyy")
+    return formattedDate
   }
   return (
     <>
