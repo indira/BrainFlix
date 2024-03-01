@@ -12,20 +12,20 @@ const Header = () => {
               <img src={Logo} alt="BrainFlix-logo" />
             </Link>
           </div>
-          <div className="site-header__input">
-            <input className="site-header__input--search" type="text" placeholder="Search" />
+          <div className="site-header__elements">
+            <input className="site-header__elements--search" type="text" placeholder="Search" />
             <div className="site-header__avatar hidden">
               <img className="site-header__avatar--img" src={Avatar} alt="Image" />
             </div>
             <Link className="noUnderline" to="/UploadVideo">
-              <button className="site-header__input--button hidden1">UPLOAD</button>
+              <button className="site-header__elements--button hidden1">UPLOAD</button>
             </Link>
           </div>
           <div className="site-header__avatar">
             <img className="site-header__avatar--img hidden1" src={Avatar} alt="Image" />
           </div>
           <Link className="noUnderline" to="/UploadVideo">
-            <button className="site-header__input--button hidden">UPLOAD</button>
+            <button className="site-header__elements--button hidden">UPLOAD</button>
           </Link>
         </div>
       </div>

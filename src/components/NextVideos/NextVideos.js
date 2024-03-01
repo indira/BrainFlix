@@ -9,20 +9,20 @@ const NextVideos = ({ videos, selectedVideo, handleVideoClick }) => {
           .filter(video => video.id !== selectedVideo.id)
           .map(video => (
             <div
-              className="videos-container"
+              className="videos__container"
               key={video.id}
               onClick={() => {
                 handleVideoClick(video.id)
               }}
             >
               <Link to={`/video/${video.id}`}>
-                <div className="videos-container__picture">
+                <div className="videos__container-picture">
                   <img src={video.image} alt="videoImg" />
                 </div>
               </Link>
-              <div className="videos-container__text">
-                <div className="videos-container__text--heading">{video.channel}</div>
-                <div className="videos-container__text--description">{video.title}</div>
+              <div className="videos__container-text">
+                <div className="videos__container-text--heading">{video.channel}</div>
+                <div className="videos__container-text--description">{video.title}</div>
               </div>
             </div>
           ))}

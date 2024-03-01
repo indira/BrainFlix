@@ -1,15 +1,13 @@
 import avatar from "../../assets/images/mohan-muruge.jpg"
 import views from "../../assets/icons/views.svg"
 import likes from "../../assets/icons/likes.svg"
-import { format } from "date-fns"
 /*This component is for the comment section of the page*/
 const Comments = ({ selectedComments, comments }) => {
   //format date function to format the date
-  // Corrected formatDate function
   const formatDate = timestamp => {
-    const date = new Date(timestamp) // No need to multiply by 1000 if timestamp is in milliseconds
-    const formattedDate = format(date, "MM/dd/yyyy")
-    return formattedDate
+    const date = new Date(timestamp).toLocaleDateString() // No need to multiply by 1000 if timestamp is in milliseconds
+    // const formattedDate = format(date, "MM/dd/yyyy")
+    return date
   }
   //Click handler for the form
   const clickHandler = e => {
@@ -23,7 +21,7 @@ const Comments = ({ selectedComments, comments }) => {
           <div className="selectedComment__main">
             <div className="selectedComment__main--one">
               <div className="selectedComment__main-by">By {comments.channel}</div>
-              <div className="selectedComment__main-date headline--medium headline--silver">{comments.timestamp}</div>
+              <div className="selectedComment__main-date headline--medium headline--silver">{formatDate(comments.timestamp)}</div>
             </div>
             <div className="selectedComment__main--two">
               <div className="selectedComment__main-view ">
@@ -66,7 +64,7 @@ const Comments = ({ selectedComments, comments }) => {
                 <div className="comment-default__textarea">
                   <div className="comment-default__HD">
                     <div className="comment-default__header">{comment.name}</div>
-                    <div className="comment-default__date">{comment.timestamp}</div>
+                    <div className="comment-default__date">{formatDate(comment.timestamp)}</div>
                   </div>
                   <div className="comment-default__text">{comment.comment}</div>
                 </div>

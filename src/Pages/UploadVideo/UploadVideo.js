@@ -1,15 +1,19 @@
 import VideoThumbnail from "../../assets/images/Upload-video-preview.jpg"
 import React from "react"
-import { Navigate } from "react-router-dom"
+import { useNavigate } from "react-router-dom"
+
 const UploadVideo = () => {
   const formRef = React.useRef(null)
+  const navigate = useNavigate()
+
   const handleSubmit = e => {
     e.preventDefault()
     alert("The form get submitted")
+    navigate("/")
   }
   const handleCancel = e => {
     e.preventDefault()
-    alert("CANCEL button was clciked")
+    navigate("/")
   }
   return (
     <section className="line">

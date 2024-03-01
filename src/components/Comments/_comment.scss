@@ -13,8 +13,8 @@
       padding-right: $medium;
     }
     &__avatar {
-      width: $large;
-      height: $large;
+      width: $vlarge;
+      height: $vlarge;
       overflow: hidden;
       border-radius: 50%;
       margin-top: $vlarge;
@@ -22,12 +22,6 @@
       @include tablet {
         margin-top: $vvlarge;
         margin-right: $medium;
-        width: $vvlarge;
-        height: $vvlarge;
-      }
-      @include desktop {
-        width: $vvlarge;
-        height: $vvlarge;
       }
       &-img {
         width: 100%;

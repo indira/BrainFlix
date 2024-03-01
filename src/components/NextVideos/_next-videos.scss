@@ -1,51 +1,62 @@
-/*This is for the NEXTVIDEOS section styling*/
-.videos-container {
-  display: flex;
-  margin-bottom: 2rem;
-
-  &__picture {
-    width: 120px;
-    height: 80px;
-    object-fit: cover;
-    border-radius: 5%;
-    overflow: hidden;
-    @include tablet {
-      width: 250px;
-      height: 150px;
-    }
-    @include desktop {
-      width: 100px;
-      height: 70px;
-    }
-  }
-  &__text {
+/* This is for the NEXTVIDEOS section styling */
+.videos {
+  &__container {
     display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    padding-left: $large;
-    font-family: "AvenirNext LT Pro";
-    @include desktop {
-      flex-grow: 4;
-      padding-left: $vsmall;
-    }
-    &--heading {
-      font-weight: 600;
-      font-size: $small;
+    margin-bottom: 2rem;
+
+    &-picture {
+      width: 120px;
+      height: 80px;
+      border-radius: 5%;
+      overflow: hidden;
+
       @include tablet {
-        font-size: 1.3rem;
+        width: 250px;
+        height: 150px;
       }
+
       @include desktop {
-        font-size: 1rem;
+        width: 100px;
+        height: 70px;
       }
     }
-    &--description {
-      font-weight: 400;
-      font-size: 1rem;
-      @include tablet {
-        font-size: 1.3rem;
-      }
+
+    &-text {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding-left: $large;
+      font-family: "AvenirNext LT Pro";
+
       @include desktop {
+        flex-grow: 4;
+        padding-left: $vsmall;
+      }
+
+      &--heading {
+        font-weight: 600;
+        font-size: $small;
+
+        @include tablet {
+          font-size: 1.3rem;
+        }
+
+        @include desktop {
+          font-size: 1rem;
+        }
+      }
+
+      &--description {
+        font-weight: 400;
         font-size: 1rem;
+
+        @include tablet {
+          font-size: 1.3rem;
+        }
+
+        @include desktop {
+          font-size: 1rem;
+        }
       }
     }
   }
