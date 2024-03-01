@@ -6,7 +6,6 @@ import Hero from "../../components/Hero/Hero"
 import videoData from "../../data/video-details.json"
 import NextVideos from "../../components/NextVideos/NextVideos"
 import Comments from "../../components/Comments/Comments"
-import { useParams } from "react-router-dom"
 
 const HomePage = () => {
   //axios request data
@@ -14,8 +13,6 @@ const HomePage = () => {
   const endPoint = "/videos"
   const apiKey = "f27529a3-9e2f-4a63-8d41-79ca998861d4"
   const url = `${baseURL}${endPoint}?api_key=${apiKey}`
-
-  const { id } = useParams() // Getting the 'id' parameter from the URL
 
   //Setting initial State
   const [videos, setVideos] = useState([])
@@ -52,11 +49,6 @@ const HomePage = () => {
       console.log("Error fetching video details:", error)
     }
   }
-
-  useEffect(() => {
-    console.log("This is selected: ", selectedComments.comments)
-  }, [selectedComments])
-
   return (
     <>
       <Hero selectedVideo={selectedVideo} />
