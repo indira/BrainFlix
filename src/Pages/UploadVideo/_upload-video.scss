@@ -1,4 +1,86 @@
 .upload-video {
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
+
+  @include tablet {
+    border-top: 1px solid $primary-silver;
+    border-bottom: 1px solid $primary-silver;
+    margin-bottom: $large;
+    margin-top: $medium;
+  }
+  @include desktop {
+    display: flex;
+    flex-direction: row;
+  }
+  &__left {
+    padding-top: $large;
+    &--image {
+      width: 300px;
+      height: 155px;
+    }
+    &--title {
+      display: block;
+      font-weight: 600;
+      font-size: $small;
+      line-height: 1.15;
+      width: 100%;
+      letter-spacing: 2px;
+      margin: 0 0 0.5rem 0;
+      text-transform: uppercase;
+      color: $primary-silver;
+    }
+  }
+
+  &__right {
+    flex-grow: 6;
+    padding-top: $large;
+    padding-left: 0;
+    @include desktop {
+      padding-left: $large;
+    }
+    &--input {
+      height: 13px;
+      &::placeholder {
+        color: black !important;
+      }
+    }
+    &--button {
+      display: flex;
+      flex-direction: column-reverse;
+      margin-bottom: 4rem;
+      @include tablet {
+        display: flex;
+        flex-direction: row;
+      }
+    }
+    &-buttonleft {
+      width: 100%;
+      margin-left: 0;
+      background-color: $primary-white;
+      color: $primary-blue;
+      border: none;
+      flex: 1;
+      @include tablet {
+        margin-left: $medium;
+        width: 15%;
+        margin-bottom: $vlarge;
+      }
+    }
+    &-buttonright {
+      margin-left: 0;
+      background: url("../../assets/icons/upload.svg");
+      background-color: $secondary-blue;
+      color: $primary-white;
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: 5% center;
+      background-size: $medium $medium;
+      margin-bottom: $vsmall;
+      @include tablet {
+        width: 15%;
+        margin-left: $medium;
+        margin-bottom: $vlarge;
+      }
+    }
+  }
 }

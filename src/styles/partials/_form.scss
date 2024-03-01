@@ -3,16 +3,19 @@ input {
   padding: $small;
   margin-bottom: $vsmall;
   border-radius: 0.25rem;
-  background-color: $secondary-alabaster;
+
   border: 1px solid $secondary-mercury;
   resize: none;
   font-family: "AvenirNext LT Pro";
-  &::placeholder {
-    color: black;
-  }
   &:focus {
     border: 2px solid $secondary-blue;
     outline-width: 0;
+  }
+  &::placeholder {
+    /* Correctly nest the placeholder selector within the input selector */
+    color: $secondary-black;
+    font-size: $small;
+    opacity: 1;
   }
 }
 textarea {
@@ -23,12 +26,17 @@ textarea {
   border: 1px solid $secondary-mercury;
   resize: none;
   font-family: "AvenirNext LT Pro";
-  &::placeholder {
-    color: black;
-  }
   &:focus {
-    border: 2px solid $secondary-blue;
+    border: 1px solid $secondary-blue;
     outline-width: 0;
+  }
+  &::placeholder {
+    /* Correctly nest the placeholder selector within the input selector */
+    color: $secondary-black;
+    font-size: $small;
+    padding-top: $medium;
+    padding-bottom: $medium;
+    opacity: 1;
   }
 }
 label {
@@ -40,7 +48,6 @@ label {
   text-transform: uppercase;
   color: $primary-silver;
 }
-
 button {
   text-transform: uppercase;
   background-color: $secondary-blue;
@@ -54,11 +61,7 @@ button {
   text-align: center;
   border: 1px solid $primary-blue;
   font-family: "AvenirNext LT Pro";
-  width: 100%;
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: 5% center;
-  background-size: $medium $medium;
+
   @include tablet {
     margin: auto;
     height: $vlarge;

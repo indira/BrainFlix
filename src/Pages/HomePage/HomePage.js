@@ -3,7 +3,6 @@ import ReactDOM from "react-dom/client"
 import { useState, useEffect } from "react"
 import axios from "axios"
 import Hero from "../../components/Hero/Hero"
-import videoData from "../../data/video-details.json"
 import NextVideos from "../../components/NextVideos/NextVideos"
 import Comments from "../../components/Comments/Comments"
 
@@ -52,13 +51,13 @@ const HomePage = () => {
   return (
     <>
       <Hero selectedVideo={selectedVideo} />
-      <div className="comment-next-outer">
+      <div className="wrapper__outerNV">
         {
-          <div className="comment-next-outer--one">
+          <div className="wrapper__outerNV--one">
             <Comments selectedComments={selectedComments} comments={comments} handleVideoClick={handleVideoClick} />
           </div>
         }
-        <div className="comment-next-outer--two">
+        <div className="wrapper__outerNV--two">
           <NextVideos videos={videos} selectedVideo={selectedVideo} handleVideoClick={handleVideoClick} />
         </div>
       </div>

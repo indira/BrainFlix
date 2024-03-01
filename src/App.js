@@ -3,7 +3,7 @@ import ReactDOM from "react-dom/client"
 
 import { BrowserRouter, Routes, Route } from "react-router-dom"
 //Calling the stylesheet
-import "../src/styles/main.scss"
+import "../src/styles/App.scss"
 import Header from "./components/Header/Header"
 import HomePage from "./Pages/HomePage/HomePage"
 import UploadVideo from "./Pages/UploadVideo/UploadVideo"

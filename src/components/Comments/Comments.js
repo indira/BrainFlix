@@ -22,10 +22,10 @@ const Comments = ({ selectedComments, comments }) => {
         <div className="selectedComment">
           <div className="selectedComment__main">
             <div className="selectedComment__main--one">
-              <div className="selectedComment__main-by headline--medium--big">By {comments.channel}</div>
+              <div className="selectedComment__main-by">By {comments.channel}</div>
               <div className="selectedComment__main-date headline--medium headline--silver">{comments.timestamp}</div>
             </div>
-            <div className="selectedComment__main--two headline--silver">
+            <div className="selectedComment__main--two">
               <div className="selectedComment__main-view ">
                 <img className="selectedComment__main--icon" src={views} alt="views" />
                 <h2 className="headline--medium ">{comments.views}</h2>
@@ -42,7 +42,7 @@ const Comments = ({ selectedComments, comments }) => {
         </div>
 
         <div className="comment">
-          <h2 className="headline-medium ">{selectedComments.length} Comments</h2>
+          <h2 className="headline-medium">{selectedComments.length} Comments</h2>
           <div className="comment-main">
             <div className="comment-main__avatar">
               <img className="comment-main__avatar-img" src={avatar} alt="Image" />

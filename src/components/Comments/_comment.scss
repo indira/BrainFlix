@@ -149,7 +149,7 @@
 .selectedComment {
   display: flex;
   flex-direction: column;
-  margin-top: $vlarge;
+  margin-top: $large;
   margin-bottom: $large;
   @include tablet {
     display: flex;
@@ -196,11 +196,24 @@
       margin-right: $vlarge;
       text-align: center;
       font-size: $medium;
-      line-height: 44px;
+      line-height: $large;
       font-family: "AvenirNext LT Pro";
       font-weight: 600;
       @include tablet {
         padding-bottom: 0;
+      }
+      @include desktop {
+        font-size: $small;
+      }
+    }
+    &-date {
+      font-size: $medium;
+      line-height: $large;
+      font-family: "AvenirNext LT Pro";
+      font-weight: 600;
+      color: $primary-silver;
+      @include desktop {
+        font-size: $small;
       }
     }
 
@@ -213,6 +226,7 @@
       display: flex;
       padding-bottom: $medium;
       margin-right: $vlarge;
+      color: $primary-silver;
       @include tablet {
         padding-bottom: 0;
       }
@@ -220,6 +234,7 @@
 
     &-like {
       display: flex;
+      color: $primary-silver;
       margin-right: $vlarge;
     }
   }

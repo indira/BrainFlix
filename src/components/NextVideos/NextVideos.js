@@ -3,8 +3,8 @@ import { Link } from "react-router-dom"
 const NextVideos = ({ videos, selectedVideo, handleVideoClick }) => {
   return (
     <section>
-      <div className="wrapper--next">
-        <div className="headline--large headline--silver headline--margin-top headline--margin-bottom">NEXT VIDEOS</div>
+      <div className="wrapper--nextV">
+        <div className="headline--large">NEXT VIDEOS</div>
         {videos
           .filter(video => video.id !== selectedVideo.id)
           .map(video => (

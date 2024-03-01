@@ -25,7 +25,7 @@ const Header = () => {
             <img className="site-header__avatar--img hidden1" src={Avatar} alt="Image" />
           </div>
           <Link className="noUnderline" to="/UploadVideo">
-            <button className="site-header__input--button button hidden">UPLOAD</button>
+            <button className="site-header__input--button hidden">UPLOAD</button>
           </Link>
         </div>
       </div>
