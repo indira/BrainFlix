@@ -14,7 +14,6 @@ const HomePage = () => {
   const apiKey = "f27529a3-9e2f-4a63-8d41-79ca998861d4"
   const url = `${baseURL}${endPoint}?api_key=${apiKey}`
 
-  console.log(url)
   const defaultVideoId = "84e96018-4022-434e-80bf-000ce4cd12b8"
 
   //params to get the id from the link
@@ -22,14 +21,13 @@ const HomePage = () => {
 
   //Setting initial State
   const [videos, setVideos] = useState([])
-  const [selectedVideo, setSelectedVideo] = useState(null)
+  const [selectedVideo, setSelectedVideo] = useState([])
 
   useEffect(() => {
     const getVideos = async () => {
       try {
         const response = await axios.get(url)
         setVideos(response.data)
-        console.log(response.data)
       } catch (e) {
         console.log("There was an error:", e)
       }
@@ -39,11 +37,9 @@ const HomePage = () => {
 
   useEffect(() => {
     const getSelectedVideo = async id => {
-      console.log("ID", id)
       try {
         const response = await axios.get(`${baseURL}${endPoint}/${id}?api_key=${apiKey}`)
         setSelectedVideo(response.data)
-        console.log(response.data)
       } catch (error) {
         console.log("Error fetching video details:", error)
       }

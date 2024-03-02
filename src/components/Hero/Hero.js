@@ -1,7 +1,6 @@
 /*This component is for displaying the selected video in the hero section of the page*/
 const Hero = ({ selectedVideo, formatDate }) => {
   const videoURL = `${selectedVideo !== null ? selectedVideo.image : "null"}`
-  console.log(videoURL)
 
   return (
     <section>
