@@ -1,6 +1,6 @@
 /*This component is designed to show the video image and is clickable*/
 import { Link } from "react-router-dom"
-const NextVideos = ({ videos, selectedVideo, handleVideoClick }) => {
+const NextVideos = ({ videos, selectedVideo }) => {
   return (
     <section>
       <div className="wrapper--nextV">
@@ -8,13 +8,7 @@ const NextVideos = ({ videos, selectedVideo, handleVideoClick }) => {
         {videos
           .filter(video => video.id !== selectedVideo.id)
           .map(video => (
-            <div
-              className="videos__container"
-              key={video.id}
-              onClick={() => {
-                handleVideoClick(video.id)
-              }}
-            >
+            <div className="videos__container" key={video.id}>
               <Link to={`/video/${video.id}`}>
                 <div className="videos__container-picture">
                   <img src={video.image} alt="videoImg" />
