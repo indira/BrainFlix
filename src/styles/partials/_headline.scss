@@ -13,15 +13,17 @@
     font-weight: 600;
     font-size: $medium;
     font-family: "AvenirNext LT Pro";
-    &--big {
-      font-weight: 700;
-    }
+
     @include tablet {
       line-height: 44px;
     }
     @include desktop {
       line-height: 34px;
       font-size: $small;
+    }
+    &-next {
+      color: $primary-silver;
+      margin-bottom: $medium;
     }
   }
   &--medium {

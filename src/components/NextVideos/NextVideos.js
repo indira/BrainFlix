@@ -4,7 +4,7 @@ const NextVideos = ({ videos, selectedVideo }) => {
   return (
     <section>
       <div className="wrapper--nextV">
-        <div className="headline--large">NEXT VIDEOS</div>
+        <div className="headline--large-next">NEXT VIDEOS</div>
         {videos
           .filter(video => video.id !== selectedVideo.id)
           .map(video => (

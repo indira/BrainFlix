@@ -63,7 +63,6 @@ button {
   font-family: "AvenirNext LT Pro";
 
   @include tablet {
-    margin: auto;
     height: $vlarge;
     width: 10rem;
   }

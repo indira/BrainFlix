@@ -30,7 +30,9 @@ a {
   }
 }
 .line {
+  border-top: 1px solid $primary-silver;
+  margin-top: $large;
   @include tablet {
-    border-top: 1px solid $primary-silver;
+    margin-top: 0;
   }
 }

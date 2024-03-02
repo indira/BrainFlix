@@ -41,7 +41,7 @@ const Comments = ({ selectedVideo }) => {
         </div>
 
         <div className="comment">
-          <h2 className="headline-medium">{} Comments</h2>
+          <h2 className="headline-medium">{selectedVideo.comments?.length} Comments</h2>
           <div className="comment-main">
             <div className="comment-main__avatar">
               <img className="comment-main__avatar-img" src={avatar} alt="Image" />
