@@ -9,13 +9,14 @@ import HomePage from "./Pages/HomePage/HomePage"
 import UploadVideo from "./Pages/UploadVideo/UploadVideo"
 import PageNotFound from "./Pages/PageNotFound/PageNotFound"
 function App() {
+  const baseURL = "http://localhost:8080"
   return (
     <BrowserRouter>
       <Header />
       <Routes>
-        <Route path="/" element={<HomePage />} />
+        <Route path="/" element={<HomePage baseURL={baseURL} />} />
         <Route path="/video/:id" element={<HomePage />} />
-        <Route path="/UploadVideo" element={<UploadVideo />} />
+        <Route path="/UploadVideo" element={<UploadVideo baseURL={baseURL} />} />
         <Route path="*" element={<PageNotFound />} />
       </Routes>
     </BrowserRouter>

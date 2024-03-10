@@ -3,7 +3,7 @@ import React, { useState } from "react"
 import { useNavigate } from "react-router-dom"
 import axios from "axios"
 
-const UploadVideo = () => {
+const UploadVideo = ({ baseURL }) => {
   const formRef = React.useRef(null)
   const navigate = useNavigate()
   const [title, setTitle] = useState("")
@@ -26,12 +26,16 @@ const UploadVideo = () => {
 
   const handleSubmit = async e => {
     e.preventDefault
+
+    const url = `${baseURL}/videos`
+    console.log(url)
+
     if (!validateInputs()) {
       return
     }
     //Axios request
     try {
-      const response = await axios.post("http://localhost:8080/videos", {
+      const response = await axios.post(url, {
         title: title,
         description: description
       })

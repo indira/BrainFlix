@@ -7,9 +7,9 @@ import Hero from "../../components/Hero/Hero"
 import NextVideos from "../../components/NextVideos/NextVideos"
 import Comments from "../../components/Comments/Comments"
 
-const HomePage = () => {
+const HomePage = ({ baseURL }) => {
   //axios request data
-  const baseURL = "http://localhost:8080"
+
   const endPoint = "/videos"
   const url = `${baseURL}${endPoint}`
 
