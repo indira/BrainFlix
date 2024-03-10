@@ -15,7 +15,7 @@ function App() {
       <Header />
       <Routes>
         <Route path="/" element={<HomePage baseURL={baseURL} />} />
-        <Route path="/video/:id" element={<HomePage />} />
+        <Route path="/video/:id" element={<HomePage baseURL={baseURL} />} />
         <Route path="/UploadVideo" element={<UploadVideo baseURL={baseURL} />} />
         <Route path="*" element={<PageNotFound />} />
       </Routes>
