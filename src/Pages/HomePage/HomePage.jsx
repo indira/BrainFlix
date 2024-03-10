@@ -48,7 +48,7 @@ const HomePage = ({ baseURL }) => {
     } else {
       getSelectedVideo(defaultVideoId)
     }
-  }, [params])
+  }, [params.id])
 
   return (
     <>
