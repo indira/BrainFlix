@@ -26,10 +26,7 @@ const UploadVideo = ({ baseURL }) => {
 
   const handleSubmit = async e => {
     e.preventDefault
-
     const url = `${baseURL}/videos`
-    console.log(url)
-
     if (!validateInputs()) {
       return
     }
