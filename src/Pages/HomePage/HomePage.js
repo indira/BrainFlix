@@ -9,10 +9,9 @@ import Comments from "../../components/Comments/Comments"
 
 const HomePage = () => {
   //axios request data
-  const baseURL = "https://unit-3-project-api-0a5620414506.herokuapp.com"
+  const baseURL = "http://localhost:8080"
   const endPoint = "/videos"
-  const apiKey = "f27529a3-9e2f-4a63-8d41-79ca998861d4"
-  const url = `${baseURL}${endPoint}?api_key=${apiKey}`
+  const url = `${baseURL}${endPoint}`
 
   const defaultVideoId = "84e96018-4022-434e-80bf-000ce4cd12b8"
 
@@ -38,14 +37,13 @@ const HomePage = () => {
   useEffect(() => {
     const getSelectedVideo = async id => {
       try {
-        const response = await axios.get(`${baseURL}${endPoint}/${id}?api_key=${apiKey}`)
+        const response = await axios.get(`${baseURL}${endPoint}/${id}`)
         setSelectedVideo(response.data)
       } catch (error) {
         console.log("Error fetching video details:", error)
       }
     }
     if (params.id) {
-      console.log(params.id) // this is coming from the url for the route images/:imageId if it exists
       getSelectedVideo(params.id)
     } else {
       getSelectedVideo(defaultVideoId)
@@ -54,13 +52,13 @@ const HomePage = () => {
 
   return (
     <>
-      <Hero selectedVideo={selectedVideo} />
+      <Hero baseURL={baseURL} selectedVideo={selectedVideo} />
       <div className="wrapper__outerNV">
         <div className="wrapper__outerNV--one">
           <Comments selectedVideo={selectedVideo} />
         </div>
         <div className="wrapper__outerNV--two">
-          <NextVideos videos={videos} selectedVideo={selectedVideo} />
+          <NextVideos baseURL={baseURL} videos={videos} selectedVideo={selectedVideo} />
         </div>
       </div>
     </>

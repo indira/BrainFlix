@@ -1,7 +1,6 @@
 /*This component is for displaying the selected video in the hero section of the page*/
-const Hero = ({ selectedVideo, formatDate }) => {
-  const videoURL = `${selectedVideo !== null ? selectedVideo.image : "null"}`
-
+const Hero = ({ baseURL, selectedVideo, formatDate }) => {
+  const videoURL = `${baseURL}/images/${selectedVideo !== null ? selectedVideo.image : "null"}`
   return (
     <section>
       <div className="large-hero">
