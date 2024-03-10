@@ -1,23 +1,35 @@
 import VideoThumbnail from "../../assets/images/Upload-video-preview.jpg"
-import React from "react"
+import React, { useState } from "react"
 import { useNavigate } from "react-router-dom"
+import axios from "axios"
 
 const UploadVideo = () => {
   const formRef = React.useRef(null)
   const navigate = useNavigate()
+  const [title, setTitle] = useState("")
+  const [description, setDescription] = useState("")
 
-  const handleSubmit = e => {
+  const handleSubmit = async e => {
     e.preventDefault()
-    alert("The form get submitted")
+    //Axios request
+    try {
+      const response = await axios.post("http://localhost:8080/videos", {
+        title: title,
+        description: description
+      })
+    } catch (e) {
+      console.log("There was an error in form submission", e)
+    }
+    // Redirect to home page after successful submission
     navigate("/")
   }
   const handleCancel = e => {
     e.preventDefault()
+    alert("You clicked the cancel button.")
     navigate("/")
   }
   return (
     <section className="line">
-      <div></div>
       <div className="wrapper">
         <h1 className="headline--vlarge">UploadVideo</h1>
         <div className="upload-video">
@@ -28,9 +40,9 @@ const UploadVideo = () => {
           <div className="upload-video__right">
             <form ref={formRef} onSubmit={handleSubmit}>
               <label htmlFor="title">TITLE YOUR VIDEO</label>
-              <input className="upload-video__right--input" type="text" name="title" placeholder=" Add a title to your video" />
+              <input onChange={e => setTitle(e.target.value)} className="upload-video__right--input" type="text" name="title" placeholder=" Add a title to your video" />
               <label htmlFor="description">ADD A VIDEO DESCRIPTION</label>
-              <textarea name="description" id="description" cols="1" rows="5" placeholder="  Add a description to your video"></textarea>
+              <textarea onChange={e => setDescription(e.target.value)} name="description" id="description" cols="1" rows="5" placeholder="  Add a description to your video"></textarea>
             </form>
           </div>
         </div>
