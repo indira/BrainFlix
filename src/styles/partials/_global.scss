@@ -36,3 +36,14 @@ a {
     margin-top: 0;
   }
 }
+/* Error state for input fields */
+.error {
+  border-color: red;
+}
+
+/* Error message styles */
+.error-message {
+  color: red;
+  font-size: $vsmall;
+  margin-bottom: $vsmall;
+}

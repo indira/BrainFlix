@@ -7,6 +7,7 @@ input {
   border: 1px solid $secondary-mercury;
   resize: none;
   font-family: "AvenirNext LT Pro";
+
   &:focus {
     border: 2px solid $secondary-blue;
     outline-width: 0;
