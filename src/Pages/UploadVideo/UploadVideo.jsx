@@ -28,7 +28,6 @@ const UploadVideo = ({ baseURL }) => {
     e.preventDefault
 
     const url = `${baseURL}/videos`
-    console.log(url)
 
     if (!validateInputs()) {
       return
